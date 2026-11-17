@@ -52,6 +52,8 @@ npx codex app-server generate-json-schema --out .schema
 
 ## Lançar uma versão
 
+Onde a extensão está publicada e como cada loja foi configurada: [docs/PUBLISHING.pt-BR.md](docs/PUBLISHING.pt-BR.md).
+
 1. Atualize `version` no `package.json` e registre as mudanças no `CHANGELOG.md`.
 2. `npm test`
 3. `npm run package` gera o `smartshift-for-codex-<versão>.vsix`.

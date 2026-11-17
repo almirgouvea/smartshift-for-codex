@@ -52,6 +52,8 @@ npx codex app-server generate-json-schema --out .schema
 
 ## Releasing
 
+Where the extension is published and how each store was set up: [docs/PUBLISHING.md](docs/PUBLISHING.md).
+
 1. Update `version` in `package.json` and add the changes to `CHANGELOG.md`.
 2. `npm test`
 3. `npm run package` builds `smartshift-for-codex-<version>.vsix`.

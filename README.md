@@ -13,7 +13,7 @@ Simple questions go to a light model. Big tasks go to a strong model, which writ
 ## Install
 
 - **VS Code:** [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=almirgouvea.smartshift-for-codex), or search for *SmartShift for Codex* in the Extensions view.
-- **Cursor, Windsurf, VSCodium and other editors that use Open VSX:** [Open VSX](https://open-vsx.org/extension/almirgouvea/smartshift-for-codex).
+- **Cursor, Windsurf, VSCodium and other editors that use Open VSX:** [Open VSX](https://open-vsx.org/extension/almirgouvea/smartshift-for-codex) (waiting for namespace verification, see [docs/PUBLISHING.md](docs/PUBLISHING.md)).
 
 ## Requirements
 
