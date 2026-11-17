@@ -56,7 +56,14 @@ npx codex app-server generate-json-schema --out .schema
 2. `npm test`
 3. `npm run package` gera o `smartshift-for-codex-<versão>.vsix`.
 4. Teste o pacote: desinstale o SmartShift, instale pelo `.vsix` e feche e abra o VS Code por completo (ele guarda o ícone em cache).
-5. Envie o `.vsix` em https://marketplace.visualstudio.com/manage/publishers/almirgouvea (**New extension** na primeira vez, **Update** nas seguintes).
+5. Publique o mesmo `.vsix` nas duas lojas. Só o mantenedor consegue: publicar exige acesso ao publisher e ao namespace `almirgouvea`.
+   - **Visual Studio Marketplace:** envie em https://marketplace.visualstudio.com/manage/publishers/almirgouvea (**Update** no menu da extensão).
+   - **Open VSX** (Cursor, Windsurf, VSCodium): com um token de publicação criado em https://open-vsx.org/user-settings/tokens, no PowerShell:
+
+     ```powershell
+     $env:OVSX_PAT = "<token>"
+     npx ovsx publish smartshift-for-codex-<versão>.vsix
+     ```
 6. Faça o commit, crie a tag e envie:
 
    ```sh

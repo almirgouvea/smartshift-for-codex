@@ -10,6 +10,11 @@ Simple questions go to a light model. Big tasks go to a strong model, which writ
 
 > **Unofficial** extension, not affiliated with OpenAI. "Codex" is a trademark of OpenAI.
 
+## Install
+
+- **VS Code:** [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=almirgouvea.smartshift-for-codex), or search for *SmartShift for Codex* in the Extensions view.
+- **Cursor, Windsurf, VSCodium and other editors that use Open VSX:** [Open VSX](https://open-vsx.org/extension/almirgouvea/smartshift-for-codex).
+
 ## Requirements
 
 - **Codex** installed: the official Codex extension for VS Code or the CLI (`npm i -g @openai/codex`). If neither is found, SmartShift offers to install it.

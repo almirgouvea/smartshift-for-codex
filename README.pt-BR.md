@@ -10,6 +10,11 @@ Pergunta simples vai para um modelo leve. Tarefa grande vai para um modelo forte
 
 > Extensão **não oficial**, sem vínculo com a OpenAI. "Codex" é marca da OpenAI.
 
+## Instalar
+
+- **VS Code:** [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=almirgouvea.smartshift-for-codex), ou procure *SmartShift for Codex* na aba Extensões.
+- **Cursor, Windsurf, VSCodium e outros editores que usam o Open VSX:** [Open VSX](https://open-vsx.org/extension/almirgouvea/smartshift-for-codex).
+
 ## O que você precisa
 
 - O **Codex** instalado: a extensão oficial do Codex no VS Code ou a CLI (`npm i -g @openai/codex`). Se não encontrar nenhum dos dois, o SmartShift oferece instalar.
