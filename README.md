@@ -2,6 +2,8 @@
 
 **English** · [Português](README.pt-BR.md)
 
+[![Marketplace](https://vsmarketplacebadges.dev/version-short/almirgouvea.smartshift-for-codex.svg)](https://marketplace.visualstudio.com/items?itemName=almirgouvea.smartshift-for-codex) [![CI](https://img.shields.io/github/actions/workflow/status/almirgouvea/smartshift-for-codex/ci.yml?branch=main&label=CI)](https://github.com/almirgouvea/smartshift-for-codex/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Picks the Codex model and reasoning effort for **each request** based on how complex it is, **without spending tokens to decide**.
 
 Simple questions go to a light model. Big tasks go to a strong model, which writes a plan first and hands execution to a mid-tier model. You don't have to switch models by hand.
@@ -126,13 +128,7 @@ npm test          # builds and runs the tests (the integration test starts the r
 npm run package   # builds the .vsix
 ```
 
-Press **F5** in VS Code to open a test window with the extension. It loads only SmartShift and opens the `test-workspace` folder.
-
-To generate the protocol schema for your Codex version:
-
-```sh
-npx codex app-server generate-json-schema --out .schema
-```
+Project structure, how to add texts and classifier rules, and the release steps are in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 

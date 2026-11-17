@@ -91,7 +91,7 @@ test("resolveTier troca modelo indisponível e esforço não suportado", () => {
   assert.equal(r2.notes.length, 1);
 });
 
-// ---------- v0.2 ----------
+// ---------- Decisão por conversa e sinais ----------
 
 const base: DecideInput = {
   override: "auto",

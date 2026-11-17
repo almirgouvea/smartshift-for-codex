@@ -10,3 +10,5 @@ node_modules/**
 test-workspace/**
 .github/**
 docs/**
+.gitattributes
+CONTRIBUTING*.md

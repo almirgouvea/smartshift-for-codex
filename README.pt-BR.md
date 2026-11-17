@@ -2,6 +2,8 @@
 
 [English](README.md) · **Português**
 
+[![Marketplace](https://vsmarketplacebadges.dev/version-short/almirgouvea.smartshift-for-codex.svg)](https://marketplace.visualstudio.com/items?itemName=almirgouvea.smartshift-for-codex) [![CI](https://img.shields.io/github/actions/workflow/status/almirgouvea/smartshift-for-codex/ci.yml?branch=main&label=CI)](https://github.com/almirgouvea/smartshift-for-codex/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Escolhe **sozinho** o modelo e o esforço de raciocínio do Codex para cada pedido, conforme a complexidade, **sem gastar tokens para decidir**.
 
 Pergunta simples vai para um modelo leve. Tarefa grande vai para um modelo forte, que primeiro planeja e depois passa a execução para um modelo intermediário. Você não precisa trocar o modelo à mão.
@@ -126,10 +128,4 @@ npm test          # compila e roda os testes (o de integração sobe o codex app
 npm run package   # gera o .vsix
 ```
 
-Pressione **F5** no VS Code para abrir uma janela de teste com a extensão. A janela de teste carrega só o SmartShift e abre a pasta `test-workspace`.
-
-Para gerar o esquema do protocolo da sua versão do Codex:
-
-```sh
-npx codex app-server generate-json-schema --out .schema
-```
+A estrutura do projeto, como acrescentar textos e regras do classificador e os passos para lançar uma versão estão em [CONTRIBUTING.pt-BR.md](CONTRIBUTING.pt-BR.md).

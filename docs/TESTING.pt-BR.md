@@ -6,6 +6,8 @@ Este documento registra como o SmartShift foi testado antes da versão 1.0.0 e o
 
 Cada teste foi feito uma vez, numa máquina real. Os números são indicativos, não um benchmark controlado.
 
+As versões 0.2.x foram versões internas, com o nome provisório "Codex Router", antes da primeira versão pública (1.0.0).
+
 ## Ambiente
 
 | | |
