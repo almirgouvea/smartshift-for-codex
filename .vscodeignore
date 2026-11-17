@@ -12,3 +12,4 @@ test-workspace/**
 docs/**
 .gitattributes
 CONTRIBUTING*.md
+linkedin/**
