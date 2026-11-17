@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Rodar extensão",
+      "type": "extensionHost",
+      "request": "launch",
+      // --disable-extensions: a janela de teste carrega só o SmartShift (inicia mais rápido).
+      // test-workspace: pasta de brincadeira para o Codex editar sem mexer no código da extensão.
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}",
+        "--disable-extensions",
+        "${workspaceFolder}/test-workspace"
+      ],
+      "outFiles": ["${workspaceFolder}/out/**/*.js"],
+      "preLaunchTask": "npm: compile"
+    }
+  ]
+}

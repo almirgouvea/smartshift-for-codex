@@ -1,0 +1,19 @@
+{
+  "description": "Automatically picks the Codex model and reasoning effort for each request, without spending tokens to decide. Unofficial extension, not affiliated with OpenAI.",
+  "view.chat": "Chat",
+  "command.newThread": "SmartShift: New conversation",
+  "command.restartServer": "SmartShift: Restart Codex",
+  "command.showLog": "SmartShift: Show log",
+  "cfg.language.auto": "Same as VS Code",
+  "cfg.language": "Language of the SmartShift panel and of the planning instructions sent to Codex.",
+  "cfg.codexPath": "Path to the `codex` executable. Empty = looks for the binary of the official Codex extension, then `codex` on PATH. Accepts `${workspaceFolder}`.",
+  "cfg.tiers": "Model and reasoning effort for each tier. If the model is not available on your account, the Codex default model is used.",
+  "cfg.thresholds": "Minimum score for each tier. Below `medium` the request is `simple`.",
+  "cfg.planExecute": "Plan → execute. `when`: `complex` (complex requests) or `never`. The `planner` writes the plan in read-only mode; the `executor` tier carries it out. `autoExecute`: execute without asking.",
+  "cfg.signals": "Signals that raise the conversation tier after a request (no tokens spent). `failedCommands`: failed commands in a row at the end of the request (errors Codex fixed later don't count). `filesChanged`: files changed in one request (not counted when executing a plan). `0` disables. A failed request always raises the tier.",
+  "cfg.developerInstructions": "Extra instructions sent to Codex in every new conversation (added to Codex's own). `null` = automatic: on Windows, asks Codex to wait longer for commands instead of polling every second (each poll resends the history). `\"\"` disables.",
+  "cfg.extraComplexKeywords": "Extra words that indicate a complex task (+3 each).",
+  "cfg.extraSimpleKeywords": "Extra words that indicate a simple task (-2 each).",
+  "cfg.sandbox": "What Codex is allowed to do on disk.",
+  "cfg.approvalPolicy": "When Codex should ask for your approval."
+}

@@ -1,0 +1,328 @@
+{
+  "name": "smartshift-for-codex",
+  "displayName": "SmartShift for Codex",
+  "description": "%description%",
+  "version": "1.0.0",
+  "publisher": "almirgouvea",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/almirgouvea/smartshift-for-codex.git"
+  },
+  "bugs": {
+    "url": "https://github.com/almirgouvea/smartshift-for-codex/issues"
+  },
+  "homepage": "https://github.com/almirgouvea/smartshift-for-codex#readme",
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#1e2430",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "AI",
+    "Other"
+  ],
+  "keywords": [
+    "codex",
+    "openai",
+    "model router",
+    "tokens",
+    "reasoning effort",
+    "auto model"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "smartShift",
+          "title": "SmartShift",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "smartShift": [
+        {
+          "type": "webview",
+          "id": "smartShift.chat",
+          "name": "%view.chat%"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "smartShift.newThread",
+        "title": "%command.newThread%"
+      },
+      {
+        "command": "smartShift.restartServer",
+        "title": "%command.restartServer%"
+      },
+      {
+        "command": "smartShift.showLog",
+        "title": "%command.showLog%"
+      }
+    ],
+    "configuration": {
+      "title": "SmartShift",
+      "properties": {
+        "smartShift.language": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "en",
+            "pt-BR"
+          ],
+          "default": "auto",
+          "enumDescriptions": [
+            "%cfg.language.auto%",
+            "English",
+            "Português"
+          ],
+          "markdownDescription": "%cfg.language%"
+        },
+        "smartShift.codexPath": {
+          "type": "string",
+          "default": "",
+          "markdownDescription": "%cfg.codexPath%"
+        },
+        "smartShift.tiers": {
+          "type": "object",
+          "default": {
+            "simple": {
+              "model": "gpt-6-luna",
+              "effort": "low"
+            },
+            "medium": {
+              "model": "gpt-6.1-sol",
+              "effort": "medium"
+            },
+            "complex": {
+              "model": "gpt-6-astra",
+              "effort": "high"
+            }
+          },
+          "markdownDescription": "%cfg.tiers%",
+          "properties": {
+            "simple": {
+              "type": "object",
+              "properties": {
+                "model": {
+                  "type": "string"
+                },
+                "effort": {
+                  "type": "string",
+                  "enum": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "ultra"
+                  ]
+                }
+              },
+              "required": [
+                "model",
+                "effort"
+              ]
+            },
+            "medium": {
+              "type": "object",
+              "properties": {
+                "model": {
+                  "type": "string"
+                },
+                "effort": {
+                  "type": "string",
+                  "enum": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "ultra"
+                  ]
+                }
+              },
+              "required": [
+                "model",
+                "effort"
+              ]
+            },
+            "complex": {
+              "type": "object",
+              "properties": {
+                "model": {
+                  "type": "string"
+                },
+                "effort": {
+                  "type": "string",
+                  "enum": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "ultra"
+                  ]
+                }
+              },
+              "required": [
+                "model",
+                "effort"
+              ]
+            }
+          }
+        },
+        "smartShift.thresholds": {
+          "type": "object",
+          "default": {
+            "medium": 2,
+            "complex": 5
+          },
+          "markdownDescription": "%cfg.thresholds%",
+          "properties": {
+            "medium": {
+              "type": "number"
+            },
+            "complex": {
+              "type": "number"
+            }
+          }
+        },
+        "smartShift.planExecute": {
+          "type": "object",
+          "default": {
+            "when": "complex",
+            "planner": {
+              "model": "gpt-6-astra",
+              "effort": "high"
+            },
+            "executor": "medium",
+            "autoExecute": false
+          },
+          "markdownDescription": "%cfg.planExecute%",
+          "properties": {
+            "when": {
+              "type": "string",
+              "enum": [
+                "complex",
+                "never"
+              ]
+            },
+            "planner": {
+              "type": "object",
+              "properties": {
+                "model": {
+                  "type": "string"
+                },
+                "effort": {
+                  "type": "string",
+                  "enum": [
+                    "low",
+                    "medium",
+                    "high",
+                    "xhigh",
+                    "max",
+                    "ultra"
+                  ]
+                }
+              }
+            },
+            "executor": {
+              "type": "string",
+              "enum": [
+                "simple",
+                "medium",
+                "complex"
+              ]
+            },
+            "autoExecute": {
+              "type": "boolean"
+            }
+          }
+        },
+        "smartShift.signals": {
+          "type": "object",
+          "default": {
+            "failedCommands": 2,
+            "filesChanged": 8
+          },
+          "markdownDescription": "%cfg.signals%",
+          "properties": {
+            "failedCommands": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "filesChanged": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "smartShift.developerInstructions": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null,
+          "markdownDescription": "%cfg.developerInstructions%"
+        },
+        "smartShift.extraComplexKeywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "%cfg.extraComplexKeywords%"
+        },
+        "smartShift.extraSimpleKeywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [],
+          "description": "%cfg.extraSimpleKeywords%"
+        },
+        "smartShift.sandbox": {
+          "type": "string",
+          "enum": [
+            "read-only",
+            "workspace-write",
+            "danger-full-access"
+          ],
+          "default": "workspace-write",
+          "description": "%cfg.sandbox%"
+        },
+        "smartShift.approvalPolicy": {
+          "type": "string",
+          "enum": [
+            "untrusted",
+            "on-request",
+            "never"
+          ],
+          "default": "on-request",
+          "description": "%cfg.approvalPolicy%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "tsc -p ./ && node --test \"out/test/**/*.test.js\"",
+    "package": "npx @vscode/vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@openai/codex": "^0.169.0",
+    "@types/node": "^26.6.6",
+    "@types/vscode": "^1.95.0",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "description": "Escolhe sozinho o modelo e o esforço de raciocínio do Codex para cada pedido, sem gastar tokens para decidir. Extensão não oficial, sem vínculo com a OpenAI.",
+  "view.chat": "Conversa",
+  "command.newThread": "SmartShift: Nova conversa",
+  "command.restartServer": "SmartShift: Reiniciar o Codex",
+  "command.showLog": "SmartShift: Mostrar log",
+  "cfg.language.auto": "Igual ao VS Code",
+  "cfg.language": "Idioma do painel do SmartShift e das instruções de planejamento enviadas ao Codex.",
+  "cfg.codexPath": "Caminho do executável `codex`. Vazio = procura o binário da extensão oficial do Codex e depois `codex` no PATH. Aceita `${workspaceFolder}`.",
+  "cfg.tiers": "Modelo e esforço de raciocínio de cada nível. Se o modelo não existir na sua conta, usa o modelo padrão do Codex.",
+  "cfg.thresholds": "Pontuação mínima de cada nível. Abaixo de `medium` o pedido é `simple`.",
+  "cfg.planExecute": "Planejar → executar. `when`: `complex` (pedidos complexos) ou `never`. O `planner` faz o plano em modo só leitura; o nível `executor` executa. `autoExecute`: executa sem pedir confirmação.",
+  "cfg.signals": "Sinais que sobem o nível da conversa depois de um pedido (sem gastar tokens). `failedCommands`: comandos seguidos com erro no fim do pedido (erros que o Codex resolveu depois não contam). `filesChanged`: arquivos alterados num pedido (não conta ao executar um plano). `0` desliga. Pedido com falha sempre sobe.",
+  "cfg.developerInstructions": "Instruções extras enviadas ao Codex em cada conversa nova (somam às do Codex). `null` = automático: no Windows, pede ao Codex para esperar mais pelos comandos em vez de consultar a cada segundo (cada consulta reenvia o histórico). `\"\"` desliga.",
+  "cfg.extraComplexKeywords": "Palavras extras que indicam tarefa complexa (+3 cada).",
+  "cfg.extraSimpleKeywords": "Palavras extras que indicam tarefa simples (-2 cada).",
+  "cfg.sandbox": "O que o Codex pode fazer no disco.",
+  "cfg.approvalPolicy": "Quando o Codex deve pedir sua aprovação."
+}
