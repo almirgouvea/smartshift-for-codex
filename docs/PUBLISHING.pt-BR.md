@@ -10,7 +10,7 @@ Onde o SmartShift está publicado, como cada loja foi configurada e o que ainda 
 |---|---|---|
 | Visual Studio Marketplace | ✅ 1.0.0 publicada e verificada em 16/11/2026 | [almirgouvea.smartshift-for-codex](https://marketplace.visualstudio.com/items?itemName=almirgouvea.smartshift-for-codex) |
 | GitHub | ✅ repositório público, CI passando no Ubuntu e no Windows, tag `v1.0.0` | [almirgouvea/smartshift-for-codex](https://github.com/almirgouvea/smartshift-for-codex) |
-| Open VSX | ⏳ 1.0.0 enviada em 16/11/2026, **inativa até aprovarem o pedido de propriedade do namespace** | [almirgouvea/smartshift-for-codex](https://open-vsx.org/extension/almirgouvea/smartshift-for-codex) |
+| Open VSX | ✅ 1.0.0 enviada em 16/11/2026, ativa e com namespace verificado desde 17/11/2026 | [almirgouvea/smartshift-for-codex](https://open-vsx.org/extension/almirgouvea/smartshift-for-codex) |
 
 ## Visual Studio Marketplace
 
@@ -43,16 +43,13 @@ O que foi feito:
    npx ovsx publish smartshift-for-codex-1.0.0.vsix
    ```
 
-O que falta:
+Verificação do namespace (concluída em 17/11/2026):
 
-- O Open VSX viu que `almirgouvea` já existe em outra loja (o Marketplace da Microsoft). Por isso a extensão fica **inativa** até a equipe do Open VSX confirmar que o namespace é do mesmo dono.
-- O pedido de propriedade é feito em **Claim Ownership**, na página da extensão, que abre uma issue em https://github.com/EclipseFdn/open-vsx.org/issues. A prova enviada: o namespace, o usuário do GitHub, o repositório e o publisher do Marketplace são todos `almirgouvea`, com links para o repositório, um commit desse usuário, o `package.json` e a página do Marketplace.
-- A revisão é manual e costuma levar de alguns dias a duas semanas. Quando aprovarem, a extensão fica ativa sem precisar publicar de novo.
+- Depois da publicação, o Open VSX viu que `almirgouvea` já existe em outra loja (o Marketplace da Microsoft). Por isso a extensão ficou **inativa** até a equipe do Open VSX confirmar que o namespace é do mesmo dono.
+- O pedido de propriedade foi feito em **Claim Ownership**, na página da extensão, que abre uma issue em https://github.com/EclipseFdn/open-vsx.org/issues. A prova enviada: o namespace, o usuário do GitHub, o repositório e o publisher do Marketplace são todos `almirgouvea`, com links para o repositório, um commit desse usuário, o `package.json` e a página do Marketplace.
+- O pedido foi aprovado no dia seguinte. A extensão ficou ativa sem precisar publicar de novo, e a API do Open VSX passou a mostrar o namespace como verificado.
 
-Quando o pedido for aprovado:
-
-- Conferir se a extensão aparece na busca do Open VSX e no Cursor.
-- Atualizar a tabela de situação acima e tirar dos READMEs o aviso "aguardando verificação".
+As próximas versões são publicadas com o mesmo token e o mesmo comando; o namespace continua verificado.
 
 ## Tokens
 

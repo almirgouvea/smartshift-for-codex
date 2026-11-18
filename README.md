@@ -2,7 +2,7 @@
 
 **English** · [Português](README.pt-BR.md)
 
-[![Marketplace](https://vsmarketplacebadges.dev/version-short/almirgouvea.smartshift-for-codex.svg)](https://marketplace.visualstudio.com/items?itemName=almirgouvea.smartshift-for-codex) [![CI](https://img.shields.io/github/actions/workflow/status/almirgouvea/smartshift-for-codex/ci.yml?branch=main&label=CI)](https://github.com/almirgouvea/smartshift-for-codex/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Marketplace](https://vsmarketplacebadges.dev/version-short/almirgouvea.smartshift-for-codex.svg)](https://marketplace.visualstudio.com/items?itemName=almirgouvea.smartshift-for-codex) [![CI](https://img.shields.io/github/actions/workflow/status/almirgouvea/smartshift-for-codex/ci.yml?branch=main&label=CI)](https://github.com/almirgouvea/smartshift-for-codex/actions/workflows/ci.yml) [![Open VSX](https://img.shields.io/open-vsx/v/almirgouvea/smartshift-for-codex?label=Open%20VSX)](https://open-vsx.org/extension/almirgouvea/smartshift-for-codex) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Picks the Codex model and reasoning effort for **each request** based on how complex it is, **without spending tokens to decide**.
 
@@ -13,7 +13,7 @@ Simple questions go to a light model. Big tasks go to a strong model, which writ
 ## Install
 
 - **VS Code:** [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=almirgouvea.smartshift-for-codex), or search for *SmartShift for Codex* in the Extensions view.
-- **Cursor, Windsurf, VSCodium and other editors that use Open VSX:** [Open VSX](https://open-vsx.org/extension/almirgouvea/smartshift-for-codex) (waiting for namespace verification, see [docs/PUBLISHING.md](docs/PUBLISHING.md)).
+- **Cursor, Windsurf, VSCodium and other editors that use Open VSX:** [Open VSX](https://open-vsx.org/extension/almirgouvea/smartshift-for-codex), or search for *SmartShift for Codex* in your editor's Extensions view.
 
 ## Requirements
 

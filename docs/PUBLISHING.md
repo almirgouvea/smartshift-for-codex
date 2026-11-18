@@ -10,7 +10,7 @@ Where SmartShift is published, how each store was set up, and what is still pend
 |---|---|---|
 | Visual Studio Marketplace | ✅ 1.0.0 published and verified on 2026-11-16 | [almirgouvea.smartshift-for-codex](https://marketplace.visualstudio.com/items?itemName=almirgouvea.smartshift-for-codex) |
 | GitHub | ✅ public repository, CI passing on Ubuntu and Windows, tag `v1.0.0` | [almirgouvea/smartshift-for-codex](https://github.com/almirgouvea/smartshift-for-codex) |
-| Open VSX | ⏳ 1.0.0 uploaded on 2026-11-16, **inactive until the namespace claim is approved** | [almirgouvea/smartshift-for-codex](https://open-vsx.org/extension/almirgouvea/smartshift-for-codex) |
+| Open VSX | ✅ 1.0.0 uploaded on 2026-11-16, active with a verified namespace since 2026-11-17 | [almirgouvea/smartshift-for-codex](https://open-vsx.org/extension/almirgouvea/smartshift-for-codex) |
 
 ## Visual Studio Marketplace
 
@@ -43,16 +43,13 @@ What was done:
    npx ovsx publish smartshift-for-codex-1.0.0.vsix
    ```
 
-What is pending:
+Namespace verification (done on 2026-11-17):
 
-- Open VSX found that `almirgouvea` already exists in another store (the Microsoft Marketplace), so the extension stays **inactive** until the Open VSX team confirms the namespace belongs to the same owner.
-- The ownership claim is made with **Claim Ownership** on the extension page, which opens an issue at https://github.com/EclipseFdn/open-vsx.org/issues. The evidence sent: the namespace, the GitHub user, the repository and the Marketplace publisher are all `almirgouvea`, with links to the repository, a commit by this user, `package.json` and the Marketplace page.
-- Review is manual and usually takes from a few days to two weeks. When approved, the extension becomes active without publishing again.
+- After publishing, Open VSX found that `almirgouvea` already exists in another store (the Microsoft Marketplace), so the extension stayed **inactive** until the Open VSX team confirmed the namespace belongs to the same owner.
+- The ownership claim was made with **Claim Ownership** on the extension page, which opens an issue at https://github.com/EclipseFdn/open-vsx.org/issues. The evidence sent: the namespace, the GitHub user, the repository and the Marketplace publisher are all `almirgouvea`, with links to the repository, a commit by this user, `package.json` and the Marketplace page.
+- The claim was approved the next day. The extension became active without publishing again, and the Open VSX API now reports the namespace as verified.
 
-When the claim is approved:
-
-- Check that the extension shows up in the Open VSX search and in Cursor.
-- Update the status table above and remove the "waiting for verification" note from the READMEs.
+Next versions are published with the same token and command; the namespace stays verified.
 
 ## Tokens
 

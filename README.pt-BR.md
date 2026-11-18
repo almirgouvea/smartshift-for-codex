@@ -2,7 +2,7 @@
 
 [English](README.md) · **Português**
 
-[![Marketplace](https://vsmarketplacebadges.dev/version-short/almirgouvea.smartshift-for-codex.svg)](https://marketplace.visualstudio.com/items?itemName=almirgouvea.smartshift-for-codex) [![CI](https://img.shields.io/github/actions/workflow/status/almirgouvea/smartshift-for-codex/ci.yml?branch=main&label=CI)](https://github.com/almirgouvea/smartshift-for-codex/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Marketplace](https://vsmarketplacebadges.dev/version-short/almirgouvea.smartshift-for-codex.svg)](https://marketplace.visualstudio.com/items?itemName=almirgouvea.smartshift-for-codex) [![CI](https://img.shields.io/github/actions/workflow/status/almirgouvea/smartshift-for-codex/ci.yml?branch=main&label=CI)](https://github.com/almirgouvea/smartshift-for-codex/actions/workflows/ci.yml) [![Open VSX](https://img.shields.io/open-vsx/v/almirgouvea/smartshift-for-codex?label=Open%20VSX)](https://open-vsx.org/extension/almirgouvea/smartshift-for-codex) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Escolhe **sozinho** o modelo e o esforço de raciocínio do Codex para cada pedido, conforme a complexidade, **sem gastar tokens para decidir**.
 
@@ -13,7 +13,7 @@ Pergunta simples vai para um modelo leve. Tarefa grande vai para um modelo forte
 ## Instalar
 
 - **VS Code:** [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=almirgouvea.smartshift-for-codex), ou procure *SmartShift for Codex* na aba Extensões.
-- **Cursor, Windsurf, VSCodium e outros editores que usam o Open VSX:** [Open VSX](https://open-vsx.org/extension/almirgouvea/smartshift-for-codex) (aguardando verificação do namespace, veja [docs/PUBLISHING.pt-BR.md](docs/PUBLISHING.pt-BR.md)).
+- **Cursor, Windsurf, VSCodium e outros editores que usam o Open VSX:** [Open VSX](https://open-vsx.org/extension/almirgouvea/smartshift-for-codex), ou procure *SmartShift for Codex* na aba Extensões do seu editor.
 
 ## O que você precisa
 
